@@ -8,7 +8,7 @@ This extension provides simple keyboard shortcuts for the current Echo360 video 
 
 This extension was created quickly and was meant as a personal extension; however all are welcome to use it. A copy of the source code can be found on the website.
 
-## Usage
+## Echo360 Keyboard Shortcuts
 
 | Key  | Action |
 | ------------- | ------------- |
