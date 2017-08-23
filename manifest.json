@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "UCCOM Extension",
-  "description": "This will make your computer life at UCCOM much easier. Features include keyboard shortcuts and 0.1x increments for Echo360, personal and class averages for MedOneStop, and will label all those pesky ribbons on LCMS+!",
+  "description": "An extension to make your tech life at UCCOM easier",
   "version": "1.0",
 
   "page_action": {
