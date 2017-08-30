@@ -3,7 +3,7 @@
 
   "name": "UCCOM Extension",
   "description": "An extension to make your tech life at UCCOM easier",
-  "version": "1.0",
+  "version": "1.0.1",
 
   "page_action": {
     "default_icon": "icon.png",
