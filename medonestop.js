@@ -17,6 +17,9 @@
         var class_avg = parseFloat($(class_avgs.get(i)).text())
         var score = parseFloat($(scores.get(i)).text())
         
+        if (!score)
+            continue
+        
         class_total += (weight*class_avg)
         score_total += (weight*score)
         weight_sum  += weight
