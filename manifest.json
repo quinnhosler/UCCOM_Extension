@@ -2,8 +2,8 @@
   "manifest_version": 2,
 
   "name": "UCCOM Extension",
-  "description": "Making your tech life at UCCOM much easier!",
-  "version": "1.0.2",
+  "description": "Making your tech life at UCCOM easier!",
+  "version": "1.0.3",
 
   "page_action": {
     "default_icon": "icon.png",
