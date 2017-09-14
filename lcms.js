@@ -1,4 +1,4 @@
-(function() {
+$(document).ready(function() {
     var count1 = 0
     var interval1 = setInterval(function() { 
         changeSize() 
@@ -66,5 +66,5 @@
         $('span.ribbon.blackGradient').css('color','white')
         return true
     }
-})();
+});
 
