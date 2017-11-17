@@ -1,12 +1,12 @@
 $(document).ready(function() {
     var count1 = 0
     var interval1 = setInterval(function() { 
-        changeSize() 
-        }, 500);
+                        changeSize() 
+                    }, 500);
         
     function changeSize() {
         count1 += 1
-        if (count1 >= 5)
+        if (count1 >= 10)
             clearInterval(interval1)
         var ribbons = $('span#ribbonWindow.ribbonWindow');
         if (!ribbons)
@@ -26,12 +26,12 @@ $(document).ready(function() {
 
     var count2 = 0
     var interval2 = setInterval(function() {
-        labelRibbons() 
-        }, 500);
+                        labelRibbons() 
+                    }, 500);
         
     function labelRibbons() {
         count2 += 0
-        if (count2 > 5)
+        if (count2 >= 10)
             clearInterval(interval2)
             
         var nav = $('div[id*=calNav], div.calSBIcon#goToToday')
@@ -41,11 +41,11 @@ $(document).ready(function() {
         var count3 = 0
         nav.on('click', function() {
             var interval3 = setInterval(function () {
-                if ( label() || count3 > 7)
+                if ( label() || count3 > 10)
                     clearInterval(interval3)
                 else
                     count += 1
-            }, 250);
+            }, 300);
         })
         
         label()
