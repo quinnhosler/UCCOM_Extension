@@ -6,6 +6,7 @@ $(document).ready(function() {
         
     function changeSize() {
         count1 += 1
+        console.log("changeSize: "+count1)
         if (count1 >= 10)
             clearInterval(interval1)
         var ribbons = $('span#ribbonWindow.ribbonWindow');
@@ -27,15 +28,16 @@ $(document).ready(function() {
     var count2 = 0
     var interval2 = setInterval(function() {
                         labelRibbons() 
-                    }, 500);
+                    }, 750);
         
     function labelRibbons() {
-        count2 += 0
+        count2 += 1
+        console.log("labelRibbons: "+count2)
         if (count2 >= 10)
             clearInterval(interval2)
             
         var nav = $('div[id*=calNav], div.calSBIcon#goToToday')
-        if (!nav)
+        if (nav.length == 0)
             return false
         
         var count3 = 0
@@ -48,14 +50,15 @@ $(document).ready(function() {
             }, 300);
         })
         
-        label()
+        if (!label())
+            return false
         clearInterval(interval2)
         return true
     }
 
     function label() {
         var ribbons = $('span.ribbon')
-        if (!ribbons)
+        if (ribbons.length == 0)
             return false
             
         $.each(ribbons, function (index, value) {
