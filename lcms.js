@@ -46,7 +46,7 @@ $(document).ready(function() {
                 if ( label() || count3 > 10)
                     clearInterval(interval3)
                 else
-                    count += 1
+                    count3 += 1
             }, 300);
         })
         
