@@ -13,7 +13,7 @@ chrome.tabs.onUpdated.addListener(function(id, info, tab) {
             else if (medonestop >= 0)
                 chrome.tabs.executeScript(null, {file: "medonestop.js"});
         });
-    } else if (echo >= 0 || lcms >= 0 || lcms >= 0) {
+    } else if (echo >= 0 || lcms >= 0 || medonestop >= 0) {
         chrome.pageAction.show(tab.id);
     } else {
         chrome.pageAction.hide(tab.id);
