@@ -5,6 +5,7 @@
     var class_avgs = $('span[id*=gridGradeEntry_labelAverageScore]')
     var scores = $('span[id*= gridGradeEntry_labelWeightedScore]')
     var weights = $('span[id*=gridGradeEntry_labelPercentWeight]')
+    var maxes = $('span[id*=gridGradeEntry_labelMaxValue]')
 
     // init counters
     var class_total = 0
@@ -14,8 +15,8 @@
     // loop and keep running tab
     for (var i = 0; i < class_avgs.length; i++) {
         var weight = parseFloat($(weights.get(i)).text())
-        var class_avg = parseFloat($(class_avgs.get(i)).text())
-        var score = parseFloat($(scores.get(i)).text())
+        var class_avg = parseFloat($(class_avgs.get(i)).text())/parseFloat($(maxes.get(i)).text())*100
+        var score = parseFloat($(scores.get(i)).text())/parseFloat($(maxes.get(i)).text())*100
         
         if (!score)
             continue
