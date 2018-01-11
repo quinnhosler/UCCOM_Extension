@@ -15,15 +15,15 @@
     // loop and keep running tab
     for (var i = 0; i < class_avgs.length; i++) {
         var weight = parseFloat($(weights.get(i)).text())
-        var class_avg = parseFloat($(class_avgs.get(i)).text())/parseFloat($(maxes.get(i)).text())*100
-        var score = parseFloat($(scores.get(i)).text())/parseFloat($(maxes.get(i)).text())*100
+        var class_avg = parseFloat($(class_avgs.get(i)).text())
+        var score = parseFloat($(scores.get(i)).text())
         
         if (!score)
             continue
         
         class_total += (weight*class_avg)
         score_total += (weight*score)
-        weight_sum  += weight
+        weight_sum  += (weight*parseFloat($(maxes.get(i)).text()))/100
     }
 
     // fill in class average, personal avg, and grade diff
