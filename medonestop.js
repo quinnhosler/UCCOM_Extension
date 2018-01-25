@@ -1,6 +1,5 @@
 (function() {
     
-    debugger;
     // get arrays of grade elements
     var class_avgs = $('span[id*=gridGradeEntry_labelAverageScore]')
     var scores = $('span[id*= gridGradeEntry_labelWeightedScore]')
@@ -38,7 +37,7 @@
     $($('span#gridGradeEntry_labelRunningScore').parent().parent().children().get(6)).css('text-align','center')
 
     var diff = Math.abs(personal_avg-class_avg).toFixed(2)
-    var prefix = (personal_avg >= class_avg ? "+" : "-");
+    var prefix = (parseFloat(personal_avg) >= parseFloat(class_avg) ? "+" : "-");
     $($('span#gridGradeEntry_labelRunningScore').parent().parent().children().get(6)).text(prefix+diff+"%")
 })();
 
