@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "UCCOM Extension",
   "description": "Making your tech life at UCCOM easier!",
-  "version": "1.1.5",
+  "version": "1.2",
 
   "page_action": {
     "default_icon": "icon.png",
@@ -17,7 +17,9 @@
     "https://echo360.org/",
     "http://echo360.org/",
     "https://comdo-wcnlb.uc.edu/",
-    "https://medicineonline.uc.edu/"
+    "https://medicineonline.uc.edu/",
+    "http://www.pathoma.com/",
+    "https://www.pathoma.com/"
   ],
   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
 }
