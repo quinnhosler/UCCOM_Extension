@@ -26,7 +26,7 @@
 			
 		var button = e.which;
 		if (button == 75 || button == 32) {					// 'k' or space(32)
-			if (button == 32 && document.activeElement.classList.contains('jwplayer'))
+			if (button == 32 && ( document.activeElement.classList.contains('jwplayer') || document.activeElement.classList.contains('jw-icon-playback') ) )
 				console.log()
 			else if (video[0].paused)
 				video[0].play() 
@@ -70,7 +70,7 @@
 				div.mozRequestFullScreen();
 				div.msRequestFullscreen();
 				div.requestFullscreen(); // standard
-			}
+			}f
 		}
 		else if (button == 77) {							// 'm'
 			video[0].mute = !video[0].mute;
