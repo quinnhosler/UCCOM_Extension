@@ -18,13 +18,20 @@
 		video[0].onratechange = function () {rateChange()};
 	}
 	$(document).ready(editSettings())
-
+	
+//	$('.jw-icon-volume').focus(function () {
+//		$('.jw-icon-volume').blur()
+//		console.log( $('.jw-icon-volume') )
+//	})
 
 	$(document).on('keydown', function (e) {
 		
 		var video = $('video');	
-			
 		var button = e.which;
+		if ([32, 37, 38, 39, 40].includes(button))
+			e.preventDefault();
+		e.stopImmediatePropagation();
+		
 		if (button == 75 || button == 32) {					// 'k' or space(32)
 			if (button == 32 && ( document.activeElement.classList.contains('jwplayer') || document.activeElement.classList.contains('jw-icon-playback') ) )
 				console.log()
@@ -73,7 +80,7 @@
 			}f
 		}
 		else if (button == 77) {							// 'm'
-			video[0].mute = !video[0].mute;
+			video[0].muted = !video[0].muted;
 		}
 		
 		if ([32, 37, 38, 39, 40].includes(button))
