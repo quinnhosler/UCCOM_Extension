@@ -5,7 +5,7 @@
     var scores = $('span[id*= gridGradeEntry_labelWeightedScore]')
     var weights = $('span[id*=gridGradeEntry_labelPercentWeight]')
     var maxes = $('span[id*=gridGradeEntry_labelMaxValue]')
-
+    
     // init counters
     var class_total = 0
     var score_total = 0
@@ -14,7 +14,13 @@
     // loop and keep running tab
     for (var i = 0; i < class_avgs.length; i++) {
         var weight = parseFloat($(weights.get(i)).text())
+        if (!weight) {
+            weights = $('span[id*=gridGradeEntry_label1]') // ridculous fix
+            weight = parseFloat($(weights.get(i)).text())
+        }
+        console.log(weight)
         var class_avg = parseFloat($(class_avgs.get(i)).text())
+        console.log(class_avg)
         var score = parseFloat($(scores.get(i)).text())
         
         if (!score)
